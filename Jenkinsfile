@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+      maven 'maven3'
+    }
     stages {
         stage('checkout'){
             steps{
@@ -16,12 +18,13 @@ pipeline {
         stage('jmeter') {
             steps {
                 echo 'Running jmeter test'
-                sh '''jmeter -jjmeter.save.saveservice.output_format=xml -n -t ${WORKSPACE}/simplilearn.jmx -l ${WORKSPACE}/report.jtl'''
+                
+                sh '''/opt/jmeter/bin/jmeter -jjmeter.save.saveservice.output_format=xml -n -t ${WORKSPACE}/simplilearn.jmx -l ${WORKSPACE}/report.jtl'''
             }
         }
         stage('publish jmeter report'){
             steps{
-                perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: '${WORKSPACE}/report.jtl'
+                perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: 'report.jtl'
             }
         }
     }
