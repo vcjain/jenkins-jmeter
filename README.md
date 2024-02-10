@@ -2,7 +2,7 @@
 
 ## Pre-requistic
 - Java 17
-
+- Install plugin Performance (Type Jmeter in Avaiable plugin search box)
 ----
 ## Steps to Install Jmeter on Ubuntu 22.x
 
