@@ -33,13 +33,12 @@ To avoid below steps and for quick practice, a sample testplan simplilearn.jmx f
 can used to run jmeter and publish performance result in jenkins.
 
 To create a script in Jmeter, please refer 
-To create a script in Jmeter, please refer 
+```
 - Create a Test plan, provide some appropriate name
 - Right click on Test plan in left menu --> Add -> Threads (users) --> Thread Group
 - - Add Number of threads as 5 or any your preferred number
   - Loop Count, set to 2
   - Keep other as default 
-
 
 ### Add Http Request for testing
   - Right click on Thread Group --> Add --> Sampler --> HTTP request
@@ -50,5 +49,5 @@ To create a script in Jmeter, please refer
 ### Setting the results viewer 
 	- Right click on Thread Group --> Add --> Listener --> View results in Table
 	- Save the test plan
-
+```
 
