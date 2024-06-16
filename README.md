@@ -10,10 +10,10 @@ To run jmeter from jenkins, we need to have jmeter installed on the machine on w
 
 Below are the steps to install jmeter.
 ```shell
-- wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.5.zip
+- wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip
 - sudo apt install unzip
 - unzip apache-jmeter-5.5.zip
-- mv apache-jmeter-5.5 jmeter
+- mv apache-jmeter-5.6.3 jmeter
 ```
 Update the executable path of jmeter
 ```shell
